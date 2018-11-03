@@ -5,7 +5,7 @@ const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
 bot.on('guildMemberAdd', member => 
-    member.addRole("508271836748972032")
+    member.addRole("508331214608793601")
 );
 
 bot.on('guildMemberAdd', member => {
