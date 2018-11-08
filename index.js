@@ -5,19 +5,19 @@ const bot = new Discord.Client();
 bot.commands = new Discord.Collection();
 
 bot.on('guildMemberAdd', member => 
-    member.addRole("508331214608793601")
+    member.addRole("476927204845027348")
 );
 
 bot.on('guildMemberAdd', member => {
-    if (member.guild.id !== "508265794908454923") return;
+    if (member.guild.id !== "476923523617783808") return;
     let avatar = member.user.avatarURL
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(avatar)
         .setTitle("** <a:2795_BongoCatHyper:508281071973171210> bem-vindo**")
-        .addField('Bem vindo(a)!', `Bem vindo(a) ${member} Ao servidor :)`)
+        .addField('Bem vindo(a)!', `Bem vindo(a) ${member} Ao servidor biscoitinho lindo!`)
         .setTimestamp()
-    bot.channels.get('508278589515366409').send({embed})
+    bot.channels.get('501021782787227648').send({embed})
 
 });
 
@@ -27,7 +27,7 @@ bot.on("guildMemberRemove", async member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(avatar)
-        .addField('Saida!', `Um zé saiu, nick dele é ${member}, espero que ele volte.`)
+        .addField('Saida!', `Um biscoitinho saiu, o nick dele é ${member}, espero que ele volte.`)
         .setTimestamp()
     bot.channels.get('501021782787227648').send({embed})
 
