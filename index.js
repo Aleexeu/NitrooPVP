@@ -60,10 +60,10 @@ bot.on("message", async message => {
 bot.on('ready', () =>{
     let status = [
         {name: '🍪 Ajuda?│!help', type: 'STREAMING', url: 'https://twitch.tv/biscoito'},
-        {name: 'músicas', type: 'LISTENING'},
-        {name: 'fortnit', type: 'PLAYING'},
-        {name: 'os videios do TW', type: 'WATCHING'},
-        {name: 'BUNDA.COM', type: 'WATCHING'},
+        {name: 'biscoito para 270 pessoas 🍪', type: 'LISTENING'},
+        {name: '🍪 biscoitinhos', type: 'PLAYING'},
+        {name: 'os videos do SrBiscoito 🍪', type: 'WATCHING'},
+        {name: '🍪', type: 'WATCHING'},
       ];
       
       //STREAMING = Transmitindo
