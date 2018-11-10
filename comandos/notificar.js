@@ -9,8 +9,3 @@ odule.exports.run = (client, message, args) => {
 module.exports.help = {
   name: "notificar"
 }
-
-
-module.exports.help = {
-  name: "notificar"
-}
