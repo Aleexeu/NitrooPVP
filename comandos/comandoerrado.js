@@ -5,7 +5,7 @@ exports.run = (bot,message,args) => {
 
     .setTitle("Não encontrado!")
     .setColor("RANDOM")
-    .setDescription(`Infelizmente não encontrei o comando, digite !help para saber os comandos!`)
+    .setDescription(`Infelizmente não encontrei o comando, digite b!help para saber os comandos!`)
 
     message.channel.send(embed);
 }
