@@ -14,10 +14,10 @@ bot.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setThumbnail(avatar)
-        .setTitle("** <a:2795_BongoCatHyper:508281071973171210> bem-vindo**")
+        .setTitle("** <a:Partness:506963369157197824> bem-vindo**")
         .addField('Bem vindo(a)!', `Bem vindo(a) ${member} Ao servidor biscoitinho lindo!`)
         .setTimestamp()
-    bot.channels.get('501021782787227648').send({embed})
+    bot.channels.get('512626706138267648').send({embed})
 
 });
 
@@ -29,7 +29,7 @@ bot.on("guildMemberRemove", async member => {
         .setThumbnail(avatar)
         .addField('Saida!', `Um biscoitinho saiu, o nick dele é ${member}, espero que ele volte.`)
         .setTimestamp()
-    bot.channels.get('501021782787227648').send({embed})
+    bot.channels.get('512626706138267648').send({embed})
 
 });
 
