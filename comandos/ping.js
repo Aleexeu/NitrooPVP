@@ -1,16 +1,28 @@
 const Discord = require("discord.js");
 
-exports.run = (bot,message,args) => {
-    let embed = new Discord.RichEmbed()
+module.exports.run = async (client, message, args) => {
+    
+    
 
-    .setTitle("PING DO BOT")
-    .setColor("RANDOM")
-    .setDescription(`O ping do bot é de ${Math.round(bot.ping)} ms!`)
-    .setFooter(`Comando de ping`, bot.user.displayAvatarURL);
+    let msgping1 = new Date();
 
-    message.channel.send(embed);
-}
+    let clientping = new Date() - message.createdAt;
 
-exports.help = {
+
+    let pingembed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .addField('Ping da API : ', Math.floor(client.ping) + 'ms')
+        .addField('Ping do bot : ', Math.floor(clientping) + 'ms')
+        .setTimestamp(new Date())
+        .setThumbnail(client.user.displayAvatarURL  )
+        .setFooter(`Requisitado por : ${message.author.tag}`, message.author.avatarURL);
+
+        
+    return message.channel.send(pingembed);
+        
+
+};
+
+module.exports.help = {
     name: "ping"
-}
+};
