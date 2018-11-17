@@ -63,7 +63,7 @@ bot.on('ready', () =>{
         {name: 'biscoito para 270 pessoas 🍪', type: 'LISTENING'},
         {name: '🍪 biscoitinhos', type: 'PLAYING'},
         {name: 'os videos do SrBiscoito 🍪', type: 'WATCHING'},
-        {name: `Estou em um servidor com ${client.users.size} memebros`, type: 'WATCHING'},
+        {name: `Estou em um servidor com ${bot.users.size} biscoitos`, type: 'WATCHING'},
       ];
       
       //STREAMING = Transmitindo
