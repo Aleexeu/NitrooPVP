@@ -5,7 +5,7 @@ avatar = message.author.avatarURL
 var embedA = new Discord.RichEmbed()
 
 
-.setDescription(':Sucoo: | Verifique sua **DM**')
+.setDescription('<:Sucoo:512949871846883329> | Verifique sua **DM**')
 .setColor("RANDOM")
 .setTimestamp()
 message.react("512478100613758976")
