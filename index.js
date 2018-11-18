@@ -80,6 +80,22 @@ bot.on('ready', () =>{
         setInterval(() => setStatus(), 10000);  //10000 = 10Ms = 10 segundos
 });
 
+bot.on("message", message => {
+
+if (message.channel.id === "512737646137573378") {
+message.react(":Sucoo:512949871846883329");
+message.react(":Pipocaa:512953511160315915");
+message.react(":MeChamou:512953748834746369");
+message.react(":Incrvel:512949791244681236");
+message.react(":Cookie:501028229415567376");
+message.react("a:Maluco:503910925523484702");
+message.react("a:PorcoRainbow:500451363730358282");
+message.react("a:Pulinho:502828735649808385");
+
+}
+
+});
+
 bot.on('message', message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
