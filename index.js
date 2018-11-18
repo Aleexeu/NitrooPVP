@@ -91,6 +91,12 @@ message.react(":Cookie:501028229415567376");
 message.react("a:Maluco:503910925523484702");
 message.react("a:PorcoRainbow:500451363730358282");
 message.react("a:Pulinho:502828735649808385");
+message.react("a:Yay:501026262534324224");
+message.react("a:Mencao:501028003296313354");
+message.react("a:PandaRainbow:501027861633826836");
+message.react("a:Espada:501026772989509643");
+message.react("a:Gatenho:512954139614117908");
+message.react("a:Ue:512954046987108362");
 
 }
 
