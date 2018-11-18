@@ -1,16 +1,101 @@
 const Discord = require("discord.js");
 
-exports.run = (bot,message,args) => {
-    let gAvatar = message.guild.iconURL;
-    let embed = new Discord.RichEmbed()
+exports.run = (client, message, args) => {
+avatar = message.author.avatarURL
+var embedA = new Discord.RichEmbed()
 
-    .setColor("RANDOM")
-    .setDescription(`Oi, eu sou o ${bot.user.username}! Aqui está meus comandos.\n \n \n|Administrador|:\n \nb!ban [PARA BANIR UM MEBRO QUE NÃO ENTÁ OBEDECENDO AS REGRAS].\n \nb!say [PARA ENVIAR UMA MENSAGEM].\n \nb!kick [PARA CHUTAR A PESSOA PRA FORA DO SERVIDOR DISCORD].\n \nb!tempmute [@usuário 10s/10h/10d motivo].\n \n \n|MEMBROS|:\n \nb!help [PARA VOCÊ VER MEUS COMANDOS].\n \nb!serverinfo [PARA VOCÊ VER AS INFORMAÇÕES DO SERVIDOR DISCORD].\n \nb!casar [PARA CASAR COM ALGUÉM]\n \nb!online [PARA VER QUANTAS PESSOAS TEMOS]\n \nb!memes [EM DESENVOLVIMENTO].\n \nb!ping [PARA VER O PING DO BOT].\n \nb!notificar [PARA GANHAR UMA TAG NOTIFICADO]\n \nb!criador [PARA SABER QUEM ESTÁ ME DESENVOLVENDO/CRIO].\n \nb!time [PARA VER QUANTO TEMPO EU ESTOU ONLINE].\n \nb!sugestão [PARA ENVIAR UMA SUGESTÃO].\n \nb!avatar [PARA VER O SEU AVATAR OU AVATAR DE OUTRA PESSOA].\n \nb!userinfo [PARA SABER AS INFORMAÇÕES DO PLAYER].\n \n \nO bot ainda está em desenvolvimento então temos poucos comandos.`)
 
-    message.author.send(embed);
-    message.reply('envia tudo que você precisa em sua DM :wink:\n \n \nOBS: (Se não chego, é porquê sua DM está desativada, por favor ative e digite o comando novamente!)');
+.setDescription(':setinha: | Verifique sua **DM**')
+.setColor("RANDOM")
+.setTimestamp()
+message.react("512478100613758976")
+message.channel.send(``).then(message=>{
+    message.delete(8000)
+    })
+
+message.channel.send(embedA).then(message=>{
+    message.delete(8000)
+    }).then(() => {
+
+var embedB = new Discord.RichEmbed()
+
+.setColor(0x0000)
+.setDescription(' ㅤㅤㅤㅤㅤㅤ 🎗 <@508810008482414594> | Comandos 🎗 ㅤㅤㅤㅤㅤㅤ\n \n \n Os emojis abaixo mostara alguns comandos!\n \nOque os emoji faz ?\n \n \n⬅️ : Ele volta pro para o inicio\n \n \n👔 Social: comandos dos memebros\n \n \n📌 ADM: comandos de punições e etc...\n \n \n🎲 Diversão: comandos para se divertir!')
+.setTimestamp()
+.setThumbnail(message.client.user.avatarURL)
+
+message.author.send(embedB).then((c) => {
+    c.react('🎲').then(() => {
+    })
+    c.react('📌').then(() => {
+    })
+    c.react('👔').then(() => {
+    })
+    c.react('👈').then(() => {
+    })
+
+    //Caso for usar algum emoji importado troque o -> r.emoji.name por: r.emoji.id
+        let diversãofilter = (r, u) => r.emoji.name === '🎲' && u.id == message.author.id;
+        let diversão = c.createReactionCollector(diversãofilter, { time: 60000});
+
+        //Aqui tem que ser igual ao let: Se mudar lá em cima por exemplo: Configuração, mude aqui também
+        diversão.on('collect', async _ => {
+            var a = new Discord.RichEmbed()
+            .setTitle('🎲 | Diversão')
+            .setDescription('Lenbrando que a prefix é ( b! ).\n\ncasar | memes')
+            .setTimestamp()
+            .setColor("RANDOM")
+            .setFooter(`Pedido por ${message.author.tag}`, message.author.avatarURL)
+            c.edit(a)
+        })
+        let Administraçãofilter = (r, u) => r.emoji.name === '📌' && u.id == message.author.id;
+        let Administração = c.createReactionCollector(Administraçãofilter, { time: 60000});
+
+        //Aqui tem que ser igual ao let: Se mudar lá em cima por exemplo: Configuração, mude aqui também
+        Administração.on('collect', async _ => {
+            var a = new Discord.RichEmbed()
+            .setTitle('📌 | Administração')
+            .setDescription('Lenbrando que a prefix é ( b! ).\n\nban | kick | mute | chaton | chatoff | online')
+            .setTimestamp()
+            .setColor("RANDOM")
+            .setFooter(`Pedido por ${message.author.tag}`, message.author.avatarURL)
+            c.edit(a)
+
+        })
+        let  Socialfilter = (r, u) => r.emoji.name === '👔' && u.id == message.author.id;
+        let  Social = c.createReactionCollector( Socialfilter, { time: 60000});
+
+        //Aqui tem que ser igual ao let: Se mudar lá em cima por exemplo: Configuração, mude aqui também
+        Social.on('collect', async _ => {
+            var a = new Discord.RichEmbed()
+            .setTitle('👔 |  Social')
+            .setDescription('Lenbrando que a prefix é ( b! ).\n\nping | notificar | rnotificar | criador | time | avatar | userinfo | serverinfo | sugestão ')
+            .setTimestamp()
+            .setColor("RANDOM")
+            .setFooter(`Pedido por ${message.author.tag}`, message.author.avatarURL)
+            c.edit(a)
+
+        })
+        let  Iniciofilter = (r, u) => r.emoji.name === '👈' && u.id == message.author.id;
+        let  Inicio = c.createReactionCollector( Iniciofilter, { time: 60000});
+
+        //Aqui tem que ser igual ao let: Se mudar lá em cima por exemplo: Configuração, mude aqui também
+        Inicio.on('collect', async _ => {
+            var a = new Discord.RichEmbed()
+            .setColor(0x0010)
+            .setDescription(' ㅤㅤㅤㅤㅤㅤ 🎗 <@508810008482414594> | Comandos 🎗 ㅤㅤㅤㅤㅤㅤ\n \n \n Os emojis abaixo mostara alguns comandos!\n \nOque os emoji faz ?\n \n \n👈 : Ele volta pro para o inicio\n \n \n👔 Social: comandos dos memebros\n \n \n📌 ADM: comandos de punições e etc...\n \n \n🎲 Diversão: comandos para se divertir!')
+            .setTimestamp()
+            .setThumbnail(message.client.user.avatarURL)
+            c.edit(a)
+
+        })
+    })
+})
 }
 
-exports.help = {
+
+
+
+module.exports.help = {
     name: "help"
-}
+    }
