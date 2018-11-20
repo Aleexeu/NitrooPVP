@@ -57,17 +57,6 @@ bot.on("message", async message => {
 
 });
 
-bot.on("message", async message => {
-    if (!message.member.hasPermission("ADMINISTRATOR")) return; {
-  if (message.content.startsWith('https://discord.gg/')) {
-        message.delete();
-        return message.channel.send(`Você ${member} está ferrado mano, <@502294454141452298> de um !tempmute nesse ${member}, ele está fazendo uma coisa que é proibida (ENVIAR OUTRO GRUPO DISCORD)!`);
-        
-    }
-  } 
-
-});
-
 bot.on('ready', () =>{
     let status = [
         {name: '🍪 Ajuda?│ b!help', type: 'STREAMING', url: 'https://twitch.tv/biscoito'},
