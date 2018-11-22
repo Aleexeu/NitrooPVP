@@ -3,6 +3,7 @@ const fs = require("fs");
 let coins = require("../coins.json");
 
 module.exports.run = async (bot, message, args) => {
+  if(!message.member.hasPermission("BAN_MEMBERS")) return errors.noPerms(message, "BAN_MEMBERS");
   //!pay @isatisfied 59345
 
   if(!coins[message.author.id]){
