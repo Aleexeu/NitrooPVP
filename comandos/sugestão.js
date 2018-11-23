@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 exports.run = (client, message, args) => {
     let suggestmessage = args.join(" ").slice(0);
-    let suggestchannel = message.guild.channels.find(c => c.name == "sugestão");
+    let suggestchannel = message.guild.channels.find(c => c.name == "sugestões");
 
     if (!suggestmessage) {
         return message.reply("Porfavor, insira sua sugestão!")
